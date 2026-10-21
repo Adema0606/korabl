@@ -14,7 +14,7 @@ while (counter < userChoises.length)
 {
     const userChoice = userChoises[counter];
 
-// Рандомный ход компьютера
+// Рандомный ход компьютера 
     const randomIndex = Math.floor(Math.random() * choises.length);
     const compChoice = choises[randomIndex];
 
@@ -42,7 +42,6 @@ while (counter < userChoises.length)
     counter++;
 }
 
-console.log('ИСТОРИЯ ИГРЫ');
 history.forEach(record => {
     console.log(record);
 });
