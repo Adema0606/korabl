@@ -35,7 +35,7 @@ while (counter < userChoises.length)
     }
 
 // результат раунда
-    history.push(`Раунд ${counter + 1}: Игрок - ${userChoice}, Компьютер - ${compChoice} - ${result}`); //('Раунд ' + (counter + 1) + ': Игрок  ' + userChoice + ', Компьютер  ' + compChoice + ' - ' + result);
+    history.push('Раунд ${counter + 1}: Игрок - ${userChoice}, Компьютер - ${compChoice} - ${result}'); //('Раунд ' + (counter + 1) + ': Игрок  ' + userChoice + ', Компьютер  ' + compChoice + ' - ' + result);
 
 // следующий райнд
     counter++;
