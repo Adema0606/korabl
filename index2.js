@@ -5,7 +5,6 @@ const choises = ['Камень', 'Ножницы', 'Бумага', 'Ящериц
 // ящерица - спока и бумагу
 // спок - ножницы и камень
 
-// Запол массив тестовыми ходами игрока
 const userChoises = ['Камень', 'Бумага', 'Ящерица', 'Спок', 'Ножницы']; 
 let counter = 0;
 const history = [];
@@ -36,7 +35,7 @@ while (counter < userChoises.length)
     }
 
 // результат раунда
-    history.push('Раунд ' + (counter + 1) + ': Игрок  ' + userChoice + ', Компьютер  ' + compChoice + ' - ' + result);
+    history.push(`Раунд ${counter + 1}: Игрок - ${userChoice}, Компьютер - ${compChoice} - ${result}`); //('Раунд ' + (counter + 1) + ': Игрок  ' + userChoice + ', Компьютер  ' + compChoice + ' - ' + result);
 
 // следующий райнд
     counter++;
