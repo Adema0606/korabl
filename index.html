@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра</title>
+    <script src="index2.js"></script>
+</head>
+<body>
+    <h2>Игра началась! Нажми F12, чтобы открыть консоль и увидеть счет.</h2>
+
+    <script>
+        const choises = ['Камень', 'Ножницы', 'Бумага'];
+
+        let computerWinsCounter = 0;
+        let userWinCounter = 0;
+
+        function getRandomComputerChoice() {
+            const randomIndex = Math.floor(Math.random() * choises.length);
+            return choises[randomIndex];
+        }
+
+        while (computerWinsCounter != 3 && userWinCounter != 3) {
+            
+            const promptUserData = prompt('Введите: Камень, Ножницы или Бумага');
+
+            if (!promptUserData || !choises.includes(promptUserData)) {
+                console.log('Нет такого варианта');
+                continue;
+            }
+
+            const computerChoice = getRandomComputerChoice();
+            
+            if (promptUserData === computerChoice) {
+                console.log('Ничья');
+            } else if (
+                (promptUserData === 'Камень' && computerChoice === 'Ножницы') ||
+                (promptUserData === 'Ножницы' && computerChoice === 'Бумага') ||
+                (promptUserData === 'Бумага' && computerChoice === 'Камень')
+            ) {
+                console.log('Вы выиграли');
+                userWinCounter++;
+            } else {
+                console.log('Вы проиграли');
+                computerWinsCounter++;
+            }
+        }
+
+        console.log('Конец игры');
+    </script>
+</body>
+</html>
